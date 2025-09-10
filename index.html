@@ -16,9 +16,62 @@
       background-color: #004080;
       color: white;
       text-align: center;
-      padding: 30px 10px;
+      padding: 20px 10px 60px 10px;
+      position: relative;
     }
 
+    /* ====== Menú de navegación ====== */
+    nav {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      position: relative;
+      display: inline-block;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      font-weight: bold;
+    }
+
+    nav ul li:hover {
+      background-color: #003060;
+      border-radius: 5px;
+    }
+
+    /* Submenú */
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004080;
+      padding: 0;
+      border-radius: 5px;
+      min-width: 160px;
+    }
+
+    nav ul ul li {
+      display: block;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    /* Resto de estilos */
     main {
       max-width: 1100px;
       margin: 30px auto;
@@ -78,6 +131,10 @@
         width: 100%;
         height: auto;
       }
+
+      nav ul li {
+        display: block;
+      }
     }
   </style>
 </head>
@@ -85,7 +142,22 @@
   <header>
     <h1>Cuestionario 1: Liderazgo y Trabajo en Equipo</h1>
     <p>U.D. Liderazgo y Trabajo en Equipo – Semestre 2025-II</p>
+
+    <!-- Menú de navegación -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Páginas ▾</a>
+          <ul>
+            <li><a href="index.html">Inicio (index.html)</a></li>
+            <li><a href="clase2.html">Clase 2 (clase2.html)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
+
+  <main>
 
   <main>
     <!-- Pregunta 1 -->
@@ -271,3 +343,4 @@
   </footer>
 </body>
 </html>
+
