@@ -274,14 +274,18 @@
     
     .class-link {
       display: inline-block;
-      color: var(--secondary);
+      background-color: var(--secondary);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: 500;
       font-size: 0.9rem;
+      transition: background-color 0.3s;
     }
     
     .class-link:hover {
-      text-decoration: underline;
+      background-color: var(--primary);
     }
     
     /* ====== INSTRUCTOR SECTION ====== */
@@ -339,7 +343,6 @@
       background-color: var(--primary);
       color: white;
       padding: 40px 20px;
-      text-align: center;
     }
     
     .footer-content {
@@ -350,11 +353,29 @@
       gap: 20px;
     }
     
+    .institute-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .institute-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .course-info {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
     .footer-links {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 20px;
     }
     
     .footer-links a {
@@ -364,6 +385,14 @@
     
     .footer-links a:hover {
       text-decoration: underline;
+    }
+    
+    .copyright {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 20px;
     }
     
     /* ====== RESPONSIVE DESIGN ====== */
@@ -452,15 +481,14 @@
         <li>
           <a href="#clases">Clases ▾</a>
           <ul class="dropdown">
-            <li><a href="clase1.html">Clase 1: Fundamentos del Liderazgo</a></li>
-            <li><a href="clase2.html">Clase 2: Liderazgo Creativo</a></li>
-            <li><a href="clase3.html">Clase 3: Trabajo en Equipo Efectivo</a></li>
-            <li><a href="clase4.html">Clase 4: Comunicación y Resolución de Conflictos</a></li>
+            <li><a href="#clase1">Clase 1: Fundamentos del Liderazgo</a></li>
+            <li><a href="#clase2">Clase 2: Liderazgo Creativo</a></li>
+            <li><a href="#clase3">Clase 3: Trabajo en Equipo Efectivo</a></li>
+            <li><a href="#clase4">Clase 4: Comunicación y Resolución de Conflictos</a></li>
           </ul>
         </li>
         <li><a href="#instructor">Instructor</a></li>
         <li><a href="#beneficios">Beneficios</a></li>
-        
       </ul>
     </div>
   </nav>
@@ -484,49 +512,197 @@
 
     <!-- Sección de clases -->
     <section id="clases">
-      <h2>Clases del Curso</h2>
+      <h2>Clases del Curso (16 Sesiones)</h2>
       <div class="classes-grid">
+        <!-- Clase 1 -->
         <div class="class-card">
           <div class="class-image">
             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 1">
           </div>
           <div class="class-content">
             <h3 class="class-title">Clase 1: Fundamentos del Liderazgo</h3>
-            <p class="class-description">Explora los conceptos básicos del liderazgo, diferencias entre líder y jefe, y los estilos de liderazgo más efectivos.</p>
-            <a href="clase1.html" class="class-link">Acceder a la clase →</a>
+            <p class="class-description">Conceptos básicos, diferencias entre líder y jefe, estilos de liderazgo efectivos.</p>
+            <a href="clase1.html" class="class-link">Acceder a la clase</a>
           </div>
         </div>
         
+        <!-- Clase 2 -->
         <div class="class-card">
           <div class="class-image">
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 2">
           </div>
           <div class="class-content">
             <h3 class="class-title">Clase 2: Liderazgo Creativo</h3>
-            <p class="class-description">Descubre cómo la creatividad se ha convertido en la competencia más valorada del liderazgo moderno.</p>
-            <a href="clase2.html" class="class-link">Acceder a la clase →</a>
+            <p class="class-description">La creatividad como competencia esencial en el liderazgo moderno.</p>
+            <a href="clase2.html" class="class-link">Acceder a la clase</a>
           </div>
         </div>
         
+        <!-- Clase 3 -->
         <div class="class-card">
           <div class="class-image">
             <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 3">
           </div>
           <div class="class-content">
             <h3 class="class-title">Clase 3: Trabajo en Equipo Efectivo</h3>
-            <p class="class-description">Aprende técnicas para formar, desarrollar y mantener equipos de alto rendimiento.</p>
-            <a href="clase3.html" class="class-link">Acceder a la clase →</a>
+            <p class="class-description">Técnicas para formar y mantener equipos de alto rendimiento.</p>
+            <a href="clase3.html" class="class-link">Acceder a la clase</a>
           </div>
         </div>
         
+        <!-- Clase 4 -->
         <div class="class-card">
           <div class="class-image">
             <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 4">
           </div>
           <div class="class-content">
             <h3 class="class-title">Clase 4: Comunicación y Resolución de Conflictos</h3>
-            <p class="class-description">Domina las habilidades de comunicación esenciales y aprende a gestionar conflictos constructivamente.</p>
-            <a href="clase4.html" class="class-link">Acceder a la clase →</a>
+            <p class="class-description">Habilidades de comunicación esenciales y gestión constructiva de conflictos.</p>
+            <a href="clase4.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 5 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 5">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 5: Liderazgo Transformacional</h3>
+            <p class="class-description">Inspirar y motivar equipos hacia cambios significativos y crecimiento.</p>
+            <a href="clase5.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 6 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 6">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 6: Gestión del Tiempo y Productividad</h3>
+            <p class="class-description">Estrategias para optimizar el tiempo y aumentar la productividad del equipo.</p>
+            <a href="clase6.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 7 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 7">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 7: Toma de Decisiones Estratégicas</h3>
+            <p class="class-description">Metodologías para la toma de decisiones efectivas en entornos complejos.</p>
+            <a href="clase7.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 8 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 8">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 8: Motivación y Compromiso</h3>
+            <p class="class-description">Técnicas para motivar equipos y fomentar el compromiso organizacional.</p>
+            <a href="clase8.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 9 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 9">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 9: Liderazgo en Situaciones de Crisis</h3>
+            <p class="class-description">Manejo efectivo de equipos en situaciones de alta presión y crisis.</p>
+            <a href="clase9.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 10 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 10">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 10: Desarrollo de Talentos</h3>
+            <p class="class-description">Estrategias para identificar y desarrollar el potencial del equipo.</p>
+            <a href="clase10.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 11 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 11">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 11: Liderazgo Ético y con Valores</h3>
+            <p class="class-description">Principios éticos y valores en la práctica del liderazgo efectivo.</p>
+            <a href="clase11.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 12 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 12">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 12: Negociación y Persuación</h3>
+            <p class="class-description">Técnicas de negociación y persuasión para líderes efectivos.</p>
+            <a href="clase12.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 13 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 13">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 13: Gestión del Cambio</h3>
+            <p class="class-description">Liderar procesos de transformación y adaptación organizacional.</p>
+            <a href="clase13.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 14 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 14">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 14: Liderazgo Inclusivo</h3>
+            <p class="class-description">Fomentar la diversidad e inclusión en equipos de trabajo.</p>
+            <a href="clase14.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 15 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 15">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 15: Innovación y Emprendimiento</h3>
+            <p class="class-description">Fomentar la cultura de innovación y espíritu emprendedor.</p>
+            <a href="clase15.html" class="class-link">Acceder a la clase</a>
+          </div>
+        </div>
+
+        <!-- Clase 16 -->
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 16">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 16: Proyecto Final de Integración</h3>
+            <p class="class-description">Aplicación práctica de todos los conceptos aprendidos en el curso.</p>
+            <a href="clase16.html" class="class-link">Acceder a la clase</a>
           </div>
         </div>
       </div>
@@ -581,15 +757,24 @@
   <!-- Pie de página -->
   <footer id="contacto">
     <div class="footer-content">
-      <p>&copy; 2025 - Curso de Liderazgo y Trabajo en Equipo | U.D. Liderazgo y Trabajo en Equipo</p>
+      <div class="institute-info">
+        <div class="institute-name">Instituto Superior Tecnológico Villa María</div>
+        <div class="course-info">Curso: Liderazgo y Trabajo en Equipo</div>
+        <div class="course-info">Docente: Ing. Aldo Farfán Sánchez</div>
+        <div class="course-info">Semestre: 2025-II</div>
+      </div>
+      
       <div class="footer-links">
         <a href="#inicio">Inicio</a>
         <a href="#clases">Clases</a>
         <a href="#instructor">Instructor</a>
-        
         <a href="#beneficios">Beneficios</a>
       </div>
       
+      <div class="copyright">
+        <p>&copy; 2025 - Instituto Superior Tecnológico Villa María | Todos los derechos reservados</p>
+        <p>Curso de Liderazgo y Trabajo en Equipo - U.D. Liderazgo y Trabajo en Equipo</p>
+      </div>
     </div>
   </footer>
 
