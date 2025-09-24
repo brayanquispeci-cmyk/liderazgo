@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curso de Liderazgo y Trabajo en Equipo</title>
+  <style>
+    :root {
+      --primary: #004080;
+      --secondary: #0066cc;
+      --accent: #ff9900;
+      --light: #f4f7f9;
+      --dark: #333;
+      --gray: #777;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    /* ====== HEADER ====== */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 60px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+      background-size: cover;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+    
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .cta-button:hover {
+      background-color: #e68a00;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    
+    /* ====== NAVIGATION ====== */
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      position: relative;
+    }
+    
+    .nav-links a {
+      display: block;
+      padding: 20px 15px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links li:hover > ul {
+      display: block;
+    }
+    
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 0 0 5px 5px;
+    }
+    
+    .dropdown li {
+      width: 100%;
+    }
+    
+    .dropdown a {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .dropdown a:hover {
+      background-color: #f5f5f5;
+    }
+    
+    .mobile-menu {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* ====== MAIN CONTENT ====== */
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    section {
+      margin-bottom: 60px;
+    }
+    
+    h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      font-size: 1.8rem;
+    }
+    
+    h3 {
+      color: var(--secondary);
+      margin: 25px 0 15px;
+    }
+    
+    /* ====== WELCOME SECTION ====== */
+    .welcome-content {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+    
+    .welcome-text {
+      flex: 1;
+    }
+    
+    .welcome-image {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .welcome-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* ====== CLASSES SECTION ====== */
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .class-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .class-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .class-image {
+      height: 180px;
+      overflow: hidden;
+    }
+    
+    .class-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .class-card:hover .class-image img {
+      transform: scale(1.05);
+    }
+    
+    .class-content {
+      padding: 20px;
+    }
+    
+    .class-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+    
+    .class-description {
+      color: var(--gray);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+    
+    .class-link {
+      display: inline-block;
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    
+    .class-link:hover {
+      text-decoration: underline;
+    }
+    
+    /* ====== INSTRUCTOR SECTION ====== */
+    .instructor-info {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .instructor-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    
+    .instructor-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .instructor-details {
+      flex: 1;
+    }
+    
+    /* ====== BENEFITS SECTION ====== */
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .benefit-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
+    
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    
+    /* ====== RESPONSIVE DESIGN ====== */
+    @media (max-width: 900px) {
+      .welcome-content, .instructor-info {
+        flex-direction: column;
+      }
+      
+      .instructor-image {
+        align-self: center;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links li {
+        width: 100%;
+      }
+      
+      .dropdown {
+        position: static;
+        box-shadow: none;
+        display: none;
+      }
+      
+      .nav-links li:hover .dropdown {
+        display: block;
+      }
+      
+      .mobile-menu {
+        display: block;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .classes-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .benefits-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header con información principal -->
+  <header>
+    <div class="header-content">
+      <h1>Liderazgo y Trabajo en Equipo</h1>
+      <p class="subtitle">Desarrolla habilidades para inspirar, guiar y lograr resultados extraordinarios</p>
+      <p class="intro-text">Este curso te proporcionará las herramientas y conocimientos necesarios para convertirte en un líder efectivo capaz de formar equipos de alto rendimiento y enfrentar los desafíos del entorno profesional actual.</p>
+      <a href="#clases" class="cta-button">Explorar Clases</a>
+    </div>
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Liderazgo y Equipo</div>
+      <div class="mobile-menu">☰</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li>
+          <a href="#clases">Clases ▾</a>
+          <ul class="dropdown">
+            <li><a href="clase1.html">Clase 1: Fundamentos del Liderazgo</a></li>
+            <li><a href="clase2.html">Clase 2: Liderazgo Creativo</a></li>
+            <li><a href="clase3.html">Clase 3: Trabajo en Equipo Efectivo</a></li>
+            <li><a href="clase4.html">Clase 4: Comunicación y Resolución de Conflictos</a></li>
+          </ul>
+        </li>
+        <li><a href="#instructor">Instructor</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Sección de bienvenida -->
+    <section id="inicio">
+      <h2>Bienvenido al Curso</h2>
+      <div class="welcome-content">
+        <div class="welcome-text">
+          <p>En un mundo empresarial cada vez más dinámico y competitivo, el liderazgo efectivo y la capacidad de trabajar en equipo se han convertido en competencias esenciales para el éxito profesional.</p>
+          <p>Este curso está diseñado para ayudarte a desarrollar las habilidades necesarias para inspirar a otros, gestionar equipos de alto rendimiento y lograr objetivos compartidos. A través de un enfoque práctico y basado en casos reales, explorarás diferentes estilos de liderazgo, técnicas de comunicación efectiva y estrategias para fomentar la colaboración.</p>
+          <p>Al finalizar el curso, estarás preparado para asumir roles de liderazgo con confianza y capacidad para generar impactos positivos en tu organización y comunidad.</p>
+        </div>
+        <div class="welcome-image">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Equipo de trabajo colaborando">
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de clases -->
+    <section id="clases">
+      <h2>Clases del Curso</h2>
+      <div class="classes-grid">
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 1">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 1: Fundamentos del Liderazgo</h3>
+            <p class="class-description">Explora los conceptos básicos del liderazgo, diferencias entre líder y jefe, y los estilos de liderazgo más efectivos.</p>
+            <a href="clase1.html" class="class-link">Acceder a la clase →</a>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 2">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 2: Liderazgo Creativo</h3>
+            <p class="class-description">Descubre cómo la creatividad se ha convertido en la competencia más valorada del liderazgo moderno.</p>
+            <a href="clase2.html" class="class-link">Acceder a la clase →</a>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 3">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 3: Trabajo en Equipo Efectivo</h3>
+            <p class="class-description">Aprende técnicas para formar, desarrollar y mantener equipos de alto rendimiento.</p>
+            <a href="clase3.html" class="class-link">Acceder a la clase →</a>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-image">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Clase 4">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">Clase 4: Comunicación y Resolución de Conflictos</h3>
+            <p class="class-description">Domina las habilidades de comunicación esenciales y aprende a gestionar conflictos constructivamente.</p>
+            <a href="clase4.html" class="class-link">Acceder a la clase →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección del instructor -->
+    <section id="instructor">
+      <h2>Instructor del Curso</h2>
+      <div class="instructor-info">
+        <div class="instructor-image">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Ing. Aldo Farfán Sánchez">
+        </div>
+        <div class="instructor-details">
+          <h3>Ing. Aldo Farfán Sánchez</h3>
+          <p>Especialista en desarrollo organizacional y liderazgo con más de 15 años de experiencia formando líderes en diversas industrias. Ha colaborado con empresas multinacionales y organizaciones sin fines de lucro, implementando programas de desarrollo de liderazgo que han impactado positivamente en la cultura organizacional y los resultados empresariales.</p>
+          <p>Su enfoque práctico y basado en evidencia combina teorías de liderazgo clásicas con las tendencias más actuales en gestión de equipos y desarrollo personal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de beneficios -->
+    <section id="beneficios">
+      <h2>¿Qué Aprenderás en este Curso?</h2>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">👥</div>
+          <h3>Formar Equipos de Alto Rendimiento</h3>
+          <p>Aprenderás técnicas para seleccionar, desarrollar y motivar equipos que superen expectativas.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">💡</div>
+          <h3>Desarrollar Liderazgo Creativo</h3>
+          <p>Descubrirás cómo fomentar la innovación y creatividad en tu equipo de trabajo.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">🗣️</div>
+          <h3>Comunicación Efectiva</h3>
+          <p>Mejorarás tus habilidades de comunicación para transmitir ideas con claridad y impacto.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">⚡</div>
+          <h3>Gestión de Conflictos</h3>
+          <p>Aprenderás a transformar conflictos en oportunidades de crecimiento y mejora.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <p>&copy; 2025 - Curso de Liderazgo y Trabajo en Equipo | U.D. Liderazgo y Trabajo en Equipo</p>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#clases">Clases</a>
+        <a href="#instructor">Instructor</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <p>Contacto: info@liderazgoyequipo.edu | Teléfono: (123) 456-7890</p>
+    </div>
+  </footer>
+
+  <script>
+    // Menú móvil
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    
+    // Cerrar menú al hacer clic en un enlace (en dispositivos móviles)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          document.querySelector('.nav-links').classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
