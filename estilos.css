@@ -130,4 +130,86 @@
         display: block;
       }
     }
- 
+ /* ====== BOTONES DE NAVEGACIÓN ====== */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 2px solid #e0e0e0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #003060;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-previous {
+    background-color: #6c757d;
+}
+
+.btn-previous:hover {
+    background-color: #545b62;
+}
+
+.btn-next {
+    background-color: #004080;
+}
+
+.btn-next:hover {
+    background-color: #003060;
+}
+
+.btn-home {
+    background-color: #28a745;
+}
+
+.btn-home:hover {
+    background-color: #218838;
+}
+
+.btn-icon {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Para alinear botones cuando no hay anterior */
+.btn-single {
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive para botones */
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .btn-home {
+        order: -1; /* Colocar el botón home primero en móviles */
+    }
+}
+
