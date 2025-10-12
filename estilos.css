@@ -178,11 +178,11 @@
 }
 
 .btn-home {
-    background-color: #28a745;
+    background-color: #ff9900;
 }
 
 .btn-home:hover {
-    background-color: #218838;
+    background-color: #e68a00;
 }
 
 .btn-icon {
@@ -212,4 +212,5 @@
         order: -1; /* Colocar el botón home primero en móviles */
     }
 }
+
 
