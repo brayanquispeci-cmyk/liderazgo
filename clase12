@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cuestionario sobre Liderazgo</title>
+  <link rel="stylesheet" href="estilos.css" />
+  
+</head>
+<body>
+  <header>
+    <h1>Clase 12: Cultura Kaizen y Trabajo en Equipo: La Clave para la Mejora Continua</h1>
+    <p>U.D. Liderazgo y Trabajo en Equipo – Semestre 2025-II</p>
+
+    <!-- Menú de navegación -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Clases ▾</a>
+          <ul>
+            <li><a href="clase1.html">Clase 1 </a></li>
+            <li><a href="clase2.html">Clase 2 </a></li>
+            <li><a href="clase3.html">Clase 3 </a></li>
+            <li><a href="clase4.html">Clase 4</a></li>
+            <li><a href="clase5.html">Clase 5</a></li>
+            <li><a href="clase6.html">Clase 6</a></li>
+            <li><a href="clase7.html">Clase 7</a></li>
+            <li><a href="clase8.html">Clase 8</a></li>
+            <li><a href="clase9.html">Clase 9</a></li>
+            <li><a href="clase10.html">Clase 10</a></li>
+            <li><a href="clase11.html">Clase 11</a></li>
+            <li><a href="clase12.html">Clase 12</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+<div class="question">
+  <img src="img/img20.jpg" alt="Pregunta 1" />
+  <div class="text-content">
+    <h3>1. ¿Qué significa el término japonés Kaizen y cuál es su propósito principal dentro de una organización?</h3>
+    <p>Kaizen significa “mejora continua” y su propósito principal es optimizar procesos, incrementar la calidad y aumentar la eficiencia de manera progresiva dentro de la organización.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img19.jpg" alt="Pregunta 2" />
+  <div class="text-content">
+    <h3>2. ¿Por qué se considera que Kaizen requiere la participación de todos los niveles jerárquicos?</h3>
+    <p>Porque la mejora continua solo funciona si directivos, mandos medios y operarios aportan ideas y se involucran activamente en la identificación y solución de problemas.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img18.jpg" alt="Pregunta 3" />
+  <div class="text-content">
+    <h3>3. ¿Cómo contribuyen los ciclos PDCA al proceso de mejora continua?</h3>
+    <p>Contribuyen proporcionando un método sistemático para planear, ejecutar, verificar y estandarizar mejoras, asegurando que cada avance pueda repetirse y perfeccionarse.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img17.jpg" alt="Pregunta 4" />
+  <div class="text-content">
+    <h3>4. ¿Por qué el Kaizen se describe como un “estilo de vida empresarial” y no solo una técnica?</h3>
+    <p>Porque implica una mentalidad constante de mejora, disciplina y compromiso diario, integrándose en la cultura organizacional y en la forma habitual de trabajar.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img16.jpg" alt="Pregunta 5" />
+  <div class="text-content">
+    <h3>5. ¿Cómo se relaciona el aprendizaje a partir del error con la filosofía Kaizen?</h3>
+    <p>Kaizen ve los errores como oportunidades valiosas para identificar causas raíz, aprender y mejorar continuamente los procesos.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img15.jpg" alt="Pregunta 6" />
+  <div class="text-content">
+    <h3>6. ¿Por qué los equipos multidisciplinarios son esenciales para implementar mejoras continuas?</h3>
+    <p>Porque combinan diferentes conocimientos y perspectivas, lo que permite analizar los problemas de manera más completa y generar soluciones más efectivas.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img14.jpg" alt="Pregunta 7" />
+  <div class="text-content">
+    <h3>7. ¿Cómo contribuye la colaboración interdepartamental al éxito de un proceso Kaizen?</h3>
+    <p>Contribuye alineando procesos, eliminando barreras internas y asegurando que las mejoras beneficien a toda la organización.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img13.jpg" alt="Pregunta 8" />
+  <div class="text-content">
+    <h3>8. ¿Cuál es el objetivo principal de la metodología 5S dentro de los entornos de trabajo?</h3>
+    <p>Crear espacios organizados, eficientes, limpios y seguros para facilitar la productividad, reducir desperdicios y mejorar la calidad.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img12.jpg" alt="Pregunta 9" />
+  <div class="text-content">
+    <h3>9. ¿Qué caracteriza a un Evento Kaizen o Kaizen Blitz y qué tipo de problemas busca resolver?</h3>
+    <p>Es una intervención rápida e intensiva donde un equipo resuelve problemas específicos que requieren mejoras visibles y de impacto en corto tiempo.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img11.jpg" alt="Pregunta 10" />
+  <div class="text-content">
+    <h3>10. ¿Qué papel desempeña el líder en la cultura Kaizen para garantizar la aplicación efectiva de mejoras continuas?</h3>
+    <p>El líder motiva, guía, proporciona recursos, fomenta la participación del equipo y asegura que las mejoras se mantengan y se integren en la cultura organizacional.</p>
+  </div>
+</div>
+
+        <!-- Botones de Navegación -->
+    <div class="navigation-buttons">
+      <a href="index.html" class="btn btn-home">
+        <span class="btn-icon">🏠</span> Volver al Inicio
+      </a>
+      
+      <div class="btn-group">
+        <a href="clase11.html" class="btn btn-previous">
+          <span class="btn-icon">⬅️</span> Anterior
+        </a>
+        <a href="clase13.html" class="btn btn-next">
+          Siguiente <span class="btn-icon">➡️</span>
+        </a>
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer>
+    <p>&copy;  IESTP Villa Maria | U.D. Liderazgo y Trabajo en Equipo | 2025-II</p>
+  </footer>
+</body>
+</html>
