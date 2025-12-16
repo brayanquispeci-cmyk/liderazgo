@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cuestionario sobre Liderazgo</title>
+  <link rel="stylesheet" href="estilos.css" />
+  
+</head>
+<body>
+  <header>
+    <h1>Clase 13: Motivación en el Entorno Grupal e Individual</h1>
+    <p>U.D. Liderazgo y Trabajo en Equipo – Semestre 2025-II</p>
+
+    <!-- Menú de navegación -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Clases ▾</a>
+          <ul>
+            <li><a href="clase1.html">Clase 1 </a></li>
+            <li><a href="clase2.html">Clase 2 </a></li>
+            <li><a href="clase3.html">Clase 3 </a></li>
+            <li><a href="clase4.html">Clase 4</a></li>
+            <li><a href="clase5.html">Clase 5</a></li>
+            <li><a href="clase6.html">Clase 6</a></li>
+            <li><a href="clase7.html">Clase 7</a></li>
+            <li><a href="clase8.html">Clase 8</a></li>
+            <li><a href="clase9.html">Clase 9</a></li>
+            <li><a href="clase10.html">Clase 10</a></li>
+            <li><a href="clase11.html">Clase 11</a></li>
+            <li><a href="clase12.html">Clase 12</a></li>
+            <li><a href="clase13.html">Clase 13</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="question">
+  <img src="img/img3.jpg" alt="Pregunta 1" />
+  <div class="text-content">
+    <h3>1. ¿Por qué la motivación es considerada un elemento vital para transformar equipos ordinarios en equipos extraordinarios?</h3>
+    <p>Porque la motivación impulsa el compromiso, el esfuerzo y la creatividad, logrando que los miembros del equipo superen lo mínimo esperado y trabajen con entusiasmo hacia objetivos comunes.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img4.jpg" alt="Pregunta 2" />
+  <div class="text-content">
+    <h3>2. ¿Cómo influyen los líderes inspiradores en la motivación colectiva dentro de un equipo de trabajo?</h3>
+    <p>Los líderes inspiradores motivan con su ejemplo, transmiten confianza y visión, y generan un ambiente donde las personas se sienten valoradas y con deseos de dar lo mejor de sí.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img5.jpg" alt="Pregunta 3" />
+  <div class="text-content">
+    <h3>3. ¿Qué papel cumple la conexión emocional dentro de un equipo motivado?</h3>
+    <p>La conexión emocional fortalece la confianza, el sentido de pertenencia y la colaboración, permitiendo que el equipo se apoye mutuamente y trabaje de manera más armoniosa.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img6.jpg" alt="Pregunta 4" />
+  <div class="text-content">
+    <h3>4. ¿Por qué es importante que un líder reconozca los talentos y pasiones únicas de cada miembro del equipo?</h3>
+    <p>Porque al reconocer talentos y pasiones, el líder puede asignar tareas adecuadas, aumentar la satisfacción laboral y potenciar el desarrollo individual y colectivo.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img7.jpg" alt="Pregunta 5" />
+  <div class="text-content">
+    <h3>5. ¿Cómo influye el sentido de propósito personal en el rendimiento individual?</h3>
+    <p>El propósito personal da significado al trabajo, incrementa la motivación interna y lleva a las personas a desempeñarse con mayor compromiso y responsabilidad.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img8.jpg" alt="Pregunta 6" />
+  <div class="text-content">
+    <h3>6. ¿De qué manera la autonomía fortalece el compromiso de un colaborador?</h3>
+    <p>La autonomía permite tomar decisiones y asumir responsabilidades, lo que genera confianza, motivación y un mayor sentido de compromiso con los resultados.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img9.jpg" alt="Pregunta 7" />
+  <div class="text-content">
+    <h3>7. ¿Cómo contribuye la comunicación constante a la motivación grupal?</h3>
+    <p>La comunicación constante evita malentendidos, mantiene alineados a los miembros del equipo y refuerza la confianza y el entusiasmo por los objetivos comunes.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img10.jpg" alt="Pregunta 8" />
+  <div class="text-content">
+    <h3>8. ¿Por qué el reconocimiento colectivo fortalece la cohesión dentro de un equipo?</h3>
+    <p>Porque el reconocimiento colectivo valora el esfuerzo grupal, fomenta la unidad y motiva a los integrantes a seguir colaborando de manera solidaria.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img11.jpg" alt="Pregunta 9" />
+  <div class="text-content">
+    <h3>9. ¿Qué características del liderazgo permiten aumentar la motivación del equipo hasta en un 70% según Gallup?</h3>
+    <p>Un liderazgo empático, comunicativo, que brinda retroalimentación constante, reconoce logros y se preocupa por el bienestar del equipo.</p>
+  </div>
+</div>
+
+<div class="question">
+  <img src="img/img12.jpg" alt="Pregunta 10" />
+  <div class="text-content">
+    <h3>10. ¿Qué estrategias aplicaron los líderes durante la pandemia para mantener motivados a los equipos a distancia?</h3>
+    <p>Aplicaron reuniones virtuales frecuentes, flexibilidad laboral, apoyo emocional, reconocimiento del esfuerzo y uso de herramientas digitales para mantener la comunicación.</p>
+  </div>
+</div>
+
+
+        <!-- Botones de Navegación -->
+    <div class="navigation-buttons">
+      <a href="index.html" class="btn btn-home">
+        <span class="btn-icon">🏠</span> Volver al Inicio
+      </a>
+      
+      <div class="btn-group">
+        <a href="clase12.html" class="btn btn-previous">
+          <span class="btn-icon">⬅️</span> Anterior
+        </a>
+
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer>
+    <p>&copy;  IESTP Villa Maria | U.D. Liderazgo y Trabajo en Equipo | 2025-II</p>
+  </footer>
+</body>
+</html>
